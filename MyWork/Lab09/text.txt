@@ -1,0 +1,4 @@
+hi
+this is a test file 
+this should print the output without the new line char 
+this should print the time adjacent to the line of text read from the file input
