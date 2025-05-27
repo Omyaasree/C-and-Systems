@@ -1,0 +1,3 @@
+#!/bin/csh
+
+mv $1 ~/.wastebasket

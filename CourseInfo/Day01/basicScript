@@ -1,0 +1,54 @@
+# basicScript
+#
+# Show off basic BASH script capabilities.
+#
+# See:
+#	https://linuxsimply.com/bash-scripting-tutorial/basics/examples
+
+
+# A comment starts with the '#' character
+
+
+# The variables $1, $2, etc store the command line args to this script.
+# Read first command line argument and save it to a variable named "INP".
+# No spaces are allowed before or after the '=' when defining a variable.
+# Spaces are allowed when using the value of a variable.
+# We do not use '$' when DEFINING a variable,
+# but we do when USING its value.
+INP=$1
+echo First command line arg is: $INP
+
+
+# Read something from the keyboard, with a prompt to the user.
+read -p "Enter a number:" num
+
+
+# Conditional if-else statement.
+# Need the spaces after/before the square brackets.
+if [ $num -gt 5 ]
+then
+ 	echo $num is greater than 5
+elif [ $num -eq 5 ]
+then
+	echo $num equals 5
+else
+ 	echo $num is less than 5
+fi
+
+
+# while loop.
+# Do a numerical calculation using double parentheses.
+while [ $num -gt 0 ]
+do
+	echo $num
+	num=$(($num - 1))
+done
+
+
+# for-each loop.
+# Curly braces set limit of variables' names.
+names=(dasher dancer prancer vixen comet cupid donner blitzen)
+for reindeer in ${names[@]}
+do
+ 	echo On ${reindeer}\!
+done
